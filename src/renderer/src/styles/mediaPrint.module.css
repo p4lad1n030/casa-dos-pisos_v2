@@ -1,0 +1,20 @@
+@media print {
+  .hide_print {
+    display: none !important;
+  }
+  .bg_print {
+    background-color: #de1111;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .bg_printTrans {
+    background-color: rgba(255, 255, 255, .8);
+  }
+  .position_PrintAbs {
+    position: absolute;
+  }
+
+  .position_PrintRel {
+    position: relative;
+  }
+}

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow: hidden;
+}
+* {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+}
+/* scrollbar-hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* pagination css */
+.pagination {
+  justify-content: center;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.page-item .page-link {
+  position: relative;
+  display: block;
+  margin: 0 2px;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-item a.page-link:hover {
+  background-color: #ffa1a1;
+}
+
+.page-item.active .page-link {
+  font-weight: 700;
+  color: #DE1111;
+  background-color: #ffffff;
+}
+
+.page-item.disabled .page-link {
+  color: #FFf;
+  pointer-events: none;
+  cursor: auto;
+}
+/* definição de estilos pra impressão das telas de Pedidos e Orçamento */
+@media print {
+  
+  .print\:hidden {
+    display: none;
+  }
+  .print\:block {
+    display: block;
+  }
+   .hide_print {
+    display: none !important;
+  }
+  .print\:bg_print {
+    background-color: #de1111;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .print\:bg_printTrans {
+    background-color: rgba(255, 255, 255, .8);
+  }
+  .print\:position_PrintAbs {
+    position: absolute;
+  }
+
+  .print\:position_PrintRel {
+    position: relative;
+  }
+  .print\:no-placeholder::placeholder {
+    color: transparent;
+    font-size: 0;
+  }
+  .print\:text-sml {
+    font-size: 11px;
+  }
+  .print\:text-13 {
+    font-size: 13px;
+  }
+
+  .print\:mtop{
+    margin-top: -10px;
+  }
+}
