@@ -12,7 +12,7 @@ xl	1280px	@media (min-width: 1280px) { ... }
 
 pra ver erros na hora de rodar o projeto:
 npm run dev --trace-warnings .
-
+ 
 componentes tailwind pra usar no projeto:
  - tabs pra separar os tipos de produtos:
  - Tabs section [1°]
